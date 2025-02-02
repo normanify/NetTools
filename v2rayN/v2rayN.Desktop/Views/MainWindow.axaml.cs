@@ -134,7 +134,7 @@ namespace v2rayN.Desktop.Views
                 }
             });
 
-            this.Title = $"{Utils.GetVersion()}";
+            //this.Title = $"{Utils.GetVersion()}";
             if (Utils.IsWindows())
             {
                 ThreadPool.RegisterWaitForSingleObject(Program.ProgramStarted, OnProgramStarted, null, -1, false);
@@ -145,7 +145,7 @@ namespace v2rayN.Desktop.Views
             {
                 if (AppHandler.Instance.IsAdministrator)
                 {
-                    this.Title = $"{Utils.GetVersion()} - {ResUI.TbSettingsLinuxSudoPasswordNotSudoRunApp}";
+                    //this.Title = $"{Utils.GetVersion()} - {ResUI.TbSettingsLinuxSudoPasswordNotSudoRunApp}";
                     NoticeHandler.Instance.SendMessageAndEnqueue(ResUI.TbSettingsLinuxSudoPasswordNotSudoRunApp);
                 }
                 menuRebootAsAdmin.IsVisible = false;
